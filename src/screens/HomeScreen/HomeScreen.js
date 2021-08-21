@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, Keyboard, Text, ScrollView, View } from "react-native";
 import styles from "./styles";
-import { FAB } from "react-native-paper";
+import { FAB, Divider } from "react-native-paper";
 import { createStackNavigator } from "@react-navigation/stack";
 import FormBuilder from "react-native-paper-form-builder";
 import { useForm } from "react-hook-form";
@@ -47,7 +47,10 @@ function HomeScreen({ navigation }) {
               <Text>{item.title}</Text>
               <Text>${Number(item.cost).toFixed(2)}</Text>
             </Title>
-            <Paragraph>{item.full_description}</Paragraph>
+            <Divider />
+            <Paragraph style={{ paddingTop: 10, paddingBottom: 10 }}>
+              {item.full_description}
+            </Paragraph>
           </Card.Content>
           <Card.Cover source={{ uri: item.featured_image }} />
           <Card.Content style={styles.spaceBetween}>
@@ -67,7 +70,7 @@ function HomeScreen({ navigation }) {
                 Delete
               </Button>
             </Card.Actions>
-            <Caption>
+            <Caption style={styles.dateInfo}>
               {item.location} | {item.date}
             </Caption>
           </Card.Content>
@@ -235,6 +238,11 @@ function DetailsScreen({ route, navigation }) {
                 required: {
                   value: false,
                   message: "Enter a number. Do not include currency sign",
+                },
+
+                pattern: {
+                  value: /^[1-9]\d*(\.\d+)?$/,
+                  message: "Please enter a valid price",
                 },
               },
 

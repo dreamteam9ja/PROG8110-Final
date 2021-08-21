@@ -63,10 +63,9 @@ export default StyleSheet.create({
     flexDirection: "row",
   },
 
-  cardBottom: {
+  dateInfo: {
     display: "flex",
-    justifyContent: "spaceBetween",
-    flex: 1,
+    placeItems: "center",
   },
   fab: {
     position: "absolute",
