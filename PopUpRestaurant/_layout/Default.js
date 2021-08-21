@@ -5,12 +5,12 @@ const Nav = require("../_partials/Nav");
 const Footer = require("../_partials/Footer");
 
 module.exports = class extends Page {
-    constructor(options){
-        super();
-        Object.assign(this, options);
-    }
-    renderHeadHeaderNav(sPage) {
-        return `
+  constructor(options) {
+    super();
+    Object.assign(this, options);
+  }
+  renderHeadHeaderNav(sPage) {
+    return `
 <!DOCTYPE html>
 <html lang="en" class="${sPage}">
     <head>
@@ -22,13 +22,13 @@ module.exports = class extends Page {
         ${new Nav(this).render()}
         <main>
     `;
-    }
-    renderFooter(sPage){
-        return `
+  }
+  renderFooter(sPage) {
+    return `
     </main>
     ${new Footer(this).render()}
     </body>
 </html>
         `;
-    }
-}
+  }
+};
