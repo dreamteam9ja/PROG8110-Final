@@ -1,11 +1,11 @@
 const Page = require("./Page");
 
-module.exports = class extends Page{
-    constructor(options){
-        super(options);
-    }
-    render(){
-        return `
+module.exports = class extends Page {
+  constructor(options) {
+    super(options);
+  }
+  render() {
+    return `
 <footer>
     &copy; <script>document.write(new Date().getFullYear())</script> ${this.sName}
 </footer>
@@ -13,5 +13,5 @@ module.exports = class extends Page{
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
         `;
-    }
-}
+  }
+};

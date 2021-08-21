@@ -1,11 +1,11 @@
-const Page=require('./Page');
+const Page = require("./Page");
 
-module.exports = class extends Page{
-    constructor(options){
-        super(options);
-    }
-    render() {
-        return `
+module.exports = class extends Page {
+  constructor(options) {
+    super(options);
+  }
+  render() {
+    return `
 <nav>
     <div class="navbar navbar-inverse navbar-static-top">
         <div class="navbar-header">
@@ -26,5 +26,5 @@ module.exports = class extends Page{
     </div>
 </nav>
         `;
-    }
-}
+  }
+};
