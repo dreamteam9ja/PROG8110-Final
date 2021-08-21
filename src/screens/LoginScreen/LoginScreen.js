@@ -5,8 +5,8 @@ import styles from "./styles";
 import { firebase } from "../../firebase/config";
 
 export default function LoginScreen({ navigation }) {
-  const [email, setEmail] = useState("lgilbert@conestogac.on.ca");
-  const [password, setPassword] = useState("jesusislord");
+  const [email, setEmail] = useState("admin@dreamteam.com");
+  const [password, setPassword] = useState("admin123");
 
   const onFooterLinkPress = () => {
     navigation.navigate("Registration");
