@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import getDateFormatted from "../../../helpers/date";
 import { FlatList, Keyboard, Text, ScrollView, View } from "react-native";
 import styles from "./styles";
 import { FAB, Divider } from "react-native-paper";
@@ -117,7 +118,7 @@ function DetailsScreen({ route, navigation }) {
       featured_image: item.featured_image,
       location: item.location,
       cost: item.cost,
-      date: item.date,
+      date: item.date ?? getDateFormatted(),
     },
 
     mode: "onChange",
@@ -190,7 +191,7 @@ function DetailsScreen({ route, navigation }) {
               },
             },
             {
-              type: "input",
+              type: "hidden",
 
               name: "featured_image",
 
