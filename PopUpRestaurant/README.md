@@ -1,6 +1,6 @@
 # ES6 Static Site Renderer ... With Markdown
 
-Simplest way that I could think of to generate a static site with ES6 templates.
+This is the simplest way that I could think of to generate a static site with ES6 templates.
 
 ## Quick Start
 
@@ -19,7 +19,7 @@ Right click over `index.html` and Open with Live Server.
 
 The basic format of a page is a .js file with the same name as the .html file that you want to have generated. For instance:
 
-``` index.js
+```index.js
 
 const Page = require("./_layout/Default");
 
